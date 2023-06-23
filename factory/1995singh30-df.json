@@ -1,0 +1,9 @@
+{
+	"name": "1995singh30-df",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5f1aa86e-b1fa-45a9-ae1c-9ab549b25dc6",
+		"tenantId": "e0b1f379-2397-4f39-8376-910c80d5f3f1"
+	}
+}
