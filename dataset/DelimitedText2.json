@@ -1,0 +1,68 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1dashto",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Pedestrian_Counting_System_-_Sensor_Locations.csv",
+				"container": "datafactoryfiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "sensor_id",
+				"type": "String"
+			},
+			{
+				"name": "sensor_description",
+				"type": "String"
+			},
+			{
+				"name": "sensor_name",
+				"type": "String"
+			},
+			{
+				"name": "installation_date",
+				"type": "String"
+			},
+			{
+				"name": "status",
+				"type": "String"
+			},
+			{
+				"name": "note",
+				"type": "String"
+			},
+			{
+				"name": "direction_1",
+				"type": "String"
+			},
+			{
+				"name": "direction_2",
+				"type": "String"
+			},
+			{
+				"name": "latitude",
+				"type": "String"
+			},
+			{
+				"name": "longitude",
+				"type": "String"
+			},
+			{
+				"name": "location",
+				"type": "String"
+			}
+		]
+	}
+}

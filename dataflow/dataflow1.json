@@ -17,6 +17,10 @@
 				{
 					"name": "select1",
 					"description": "Renaming source1 to select1 with columns 'sensor_id, sensor_description, sensor_name, installation_date, status, note, direction_1, direction_2, location'"
+				},
+				{
+					"name": "aggregate1",
+					"description": "Add aggregate sensor_id"
 				}
 			],
 			"scriptLines": [
@@ -50,7 +54,9 @@
 				"          location",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"source1 aggregate(groupBy(location),",
+				"     sensor_description = ERROR_FUNCTION('')) ~> aggregate1"
 			]
 		}
 	}
