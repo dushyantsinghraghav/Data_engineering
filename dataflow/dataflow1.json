@@ -1,0 +1,57 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "select1",
+					"description": "Renaming source1 to select1 with columns 'sensor_id, sensor_description, sensor_name, installation_date, status, note, direction_1, direction_2, location'"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          sensor_id as string,",
+				"          sensor_description as string,",
+				"          sensor_name as string,",
+				"          installation_date as string,",
+				"          status as string,",
+				"          note as string,",
+				"          direction_1 as string,",
+				"          direction_2 as string,",
+				"          latitude as string,",
+				"          longitude as string,",
+				"          location as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 select(mapColumn(",
+				"          sensor_id,",
+				"          sensor_description,",
+				"          sensor_name,",
+				"          installation_date,",
+				"          status,",
+				"          note,",
+				"          direction_1,",
+				"          direction_2,",
+				"          latitude,",
+				"          longitude,",
+				"          location",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1"
+			]
+		}
+	}
+}
