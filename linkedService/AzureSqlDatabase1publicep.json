@@ -1,0 +1,15 @@
+{
+	"name": "AzureSqlDatabase1publicep",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "dashoct2024sql.database.windows.net",
+			"database": "dashoctnovdb",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "dynamicdashdf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7609f0c5-2cdb-4465-ac03-534115d4d933",
+		"tenantId": "e0b1f379-2397-4f39-8376-910c80d5f3f1"
+	}
+}

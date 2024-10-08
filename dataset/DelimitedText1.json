@@ -2,7 +2,7 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1dashto",
+			"referenceName": "AzureBlobStorageoct2024",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Pedestrian_Counting_System_-_Sensor_Locations.csv",
-				"container": "datafactoryfiles"
+				"container": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -20,49 +19,46 @@
 		},
 		"schema": [
 			{
-				"name": "sensor_id",
+				"name": "ID",
 				"type": "String"
 			},
 			{
-				"name": "sensor_description",
+				"name": "Date_Time",
 				"type": "String"
 			},
 			{
-				"name": "sensor_name",
+				"name": "Year",
 				"type": "String"
 			},
 			{
-				"name": "installation_date",
+				"name": "Month",
 				"type": "String"
 			},
 			{
-				"name": "status",
+				"name": "Mdate",
 				"type": "String"
 			},
 			{
-				"name": "note",
+				"name": "Day",
 				"type": "String"
 			},
 			{
-				"name": "direction_1",
+				"name": "Time",
 				"type": "String"
 			},
 			{
-				"name": "direction_2",
+				"name": "Sensor_ID",
 				"type": "String"
 			},
 			{
-				"name": "latitude",
+				"name": "Sensor_Name",
 				"type": "String"
 			},
 			{
-				"name": "longitude",
-				"type": "String"
-			},
-			{
-				"name": "location",
+				"name": "Hourly_Counts",
 				"type": "String"
 			}
 		]
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
