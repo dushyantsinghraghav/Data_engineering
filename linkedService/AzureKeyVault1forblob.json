@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVault1forblob",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://keyvaultforblobstorage.vault.azure.net/"
+		}
+	}
+}
