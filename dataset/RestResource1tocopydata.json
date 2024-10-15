@@ -1,0 +1,12 @@
+{
+	"name": "RestResource1tocopydata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestService1topulldata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}

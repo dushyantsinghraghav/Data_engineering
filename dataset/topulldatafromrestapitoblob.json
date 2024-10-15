@@ -1,0 +1,91 @@
+{
+	"name": "topulldatafromrestapitoblob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1usingkeyvault",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Community_Name",
+				"type": "String"
+			},
+			{
+				"name": "Sector",
+				"type": "String"
+			},
+			{
+				"name": "Side",
+				"type": "String"
+			},
+			{
+				"name": "Per_capita_income",
+				"type": "String"
+			},
+			{
+				"name": "Percent_unemployed",
+				"type": "String"
+			},
+			{
+				"name": "Percent_without_diploma",
+				"type": "String"
+			},
+			{
+				"name": "Percent_households_below_poverty",
+				"type": "String"
+			},
+			{
+				"name": "Neighborhood",
+				"type": "String"
+			},
+			{
+				"name": "Ward",
+				"type": "String"
+			},
+			{
+				"name": "ZIP",
+				"type": "String"
+			},
+			{
+				"name": "Police_District",
+				"type": "String"
+			},
+			{
+				"name": "Unit_ID",
+				"type": "String"
+			},
+			{
+				"name": "Violation_ID",
+				"type": "String"
+			},
+			{
+				"name": "Issued_year",
+				"type": "String"
+			},
+			{
+				"name": "Time_of_day",
+				"type": "String"
+			},
+			{
+				"name": "License_plate_origin",
+				"type": "String"
+			},
+			{
+				"name": "Vehicle_type",
+				"type": "String"
+			}
+		]
+	}
+}
