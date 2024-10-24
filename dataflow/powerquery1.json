@@ -13,7 +13,7 @@
 					}
 				}
 			],
-			"script": "section Section1;\r\nshared DelimitedText5 = let AdfDoc = AzureStorage.BlobContents(\"https://personaldatacontainer.blob.core.windows.net/input/ChicagoParkingTickets1.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"DelimitedText5\" in Source;\r\n",
+			"script": "section Section1;\r\nshared DelimitedText5 = let AdfDoc = AzureStorage.BlobContents(\"https://personaldatacontainer.blob.core.windows.net/input/ChicagoParkingTickets1.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"DelimitedText5\",\r\n  #\"Filtered rows\" = Table.SelectRows(Source, each ([Community_Name] = \"Austin\" or [Community_Name] = \"Bridgeport\" or [Community_Name] = \"Brighton Park\" or [Community_Name] = \"Chicago Lawn\" or [Community_Name] = \"Douglas\") and ([License_plate_origin] = \"Out-of-state\")) in #\"Filtered rows\";\r\n",
 			"documentLocale": "en-us"
 		}
 	}
