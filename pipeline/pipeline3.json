@@ -89,7 +89,21 @@
 						"coreCount": 8,
 						"computeType": "General"
 					},
-					"queries": []
+					"queries": [
+						{
+							"queryName": "UserQuery",
+							"dataflowSinks": [
+								{
+									"name": "UserQueryDelimitedText6",
+									"dataset": {
+										"referenceName": "DelimitedText6",
+										"type": "DatasetReference"
+									},
+									"script": "sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> UserQueryDelimitedText6"
+								}
+							]
+						}
+					]
 				}
 			}
 		],
